@@ -2,7 +2,6 @@
 import Layout from "../layouts/Layout.astro";
 import Card from "../components/Card.astro";
 const data = Astro.locals;
-console.log({ data });
 // @ts-ignore
 const { name, city, country, languages, currencyCode, currencySymbol } = data;
 ---
@@ -10,15 +9,9 @@ const { name, city, country, languages, currencyCode, currencySymbol } = data;
 <Layout title="Welcome to Astro.">
   <main>
     <Card>
-		<div class="flex flex-col">
-
-			<h4>name -> {country}</h4>
-			<h4>currency -> {name}</h4>
-			<h4>city -> {city}</h4>
-			<h4>languages -> {languages}</h4>
-			<h4>currencyCode -> {currencyCode}</h4>
-			<h4>currenc symbol -> {currencySymbol}</h4>
-		</div>
+      <div class="flex flex-col">
+        country -> {country}
+      </div>
     </Card>
   </main>
 </Layout>
