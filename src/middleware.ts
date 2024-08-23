@@ -6,6 +6,8 @@ interface props {
   next: () => Promise<Response>;
 }
 
+export const prerender = false
+
 // @ts-ignore
 export const onRequest: MiddlewareHandler = defineMiddleware(
   (context, next) => {
